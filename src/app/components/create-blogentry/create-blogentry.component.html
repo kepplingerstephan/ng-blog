@@ -1,17 +1,20 @@
 <script src="/path/to/tinymce.min.js"></script>
 <app-navbar></app-navbar>
-<div class="m-3 container-fluid justify-content-center">
-    <editor 
-        id="myEditor"
-        apiKey="b9wpawtrwwrhejlcbx9j7fx6vfdbohdvin3knzmn3thgaq68"
-        [init]="{ 
-            plugins: 'lists link image table code help wordcount',
-            width: 700, 
-            base_url: '/tinymce', 
-            suffix: '.min'
-        }"
-        >
-    </editor>
+<div class="container m-3 justify-content-center">
+    <div class="row justify-content-center">
+        <div class="col">
+        <editor style="float:right;" id="myEditor" apiKey="b9wpawtrwwrhejlcbx9j7fx6vfdbohdvin3knzmn3thgaq68" [init]="{ 
+        plugins: 'lists link image table code help wordcount',
+        width: 700, 
+        base_url: '/tinymce', 
+        suffix: '.min'
+    }">
+        </editor>
+    </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col">
+            <button class="btn btn-success float-end mt-3" (click)="submit()">Anlegen</button>
+        </div>
+    </div>
 </div>
-
-<button (click)="logContent()">Get Content</button>
