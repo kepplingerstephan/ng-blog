@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="ms-5 mt-3 container-fluid justify-content-center">
+        <ul class="nav">
+            <li class="nav-item ms-2 mt-1">
+                <a class="navbar-brand" href="#">Blog</a>
+            </li>
+            <ng-container>
+            
+                <li class="nav-item mx-2">
+                    <input [disabled]="hidden()" class="form-control mx-2" type="search" placeholder="Suchen" aria-label="Search">
+                </li>
+                <li class="nav-item mx-2">
+                    <select [disabled]="hidden()" class="form-select mx-2">
+                        <option selected>filtern</option>
+                        <option>Test</option>
+                        <option>Test2</option>
+                    </select>
+                </li>
+                <li class="nav-item mx-3">
+                    <button [disabled]="hidden()" routerLink="/create" class="btn btn-success"><i class="bi bi-plus-circle"></i></button>
+                </li>
+            </ng-container>
+
+        </ul>
+
+    </div>
+    <div>
+        <ul class="nav mt-3  float-end">
+            <li class="nav-item mx-2 me-4">
+                <a class="nav-link" href="#"><i style="font-size:30px" class="bi bi-person-circle"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>

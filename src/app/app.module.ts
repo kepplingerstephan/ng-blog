@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 
 // bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CreateBlogentryComponent } from './components/create-blogentry/create-blogentry.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateBlogentryComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
