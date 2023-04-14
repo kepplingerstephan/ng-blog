@@ -1,5 +1,7 @@
-class User {
-    public Id: number;
-    public Name: string;
-    public Blogs: Blog[];
+import { Blog } from "./Blog";
+
+export interface User {
+    id: number;
+    name: string;
+    blogs: Blog[];
   }

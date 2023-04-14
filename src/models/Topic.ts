@@ -1,5 +1,5 @@
-class Topic {
-    public Id: number;
-    public Name: string;
-    public Blogs: Blog[];
+export interface Topic {
+    id: number;
+    name: string;
+    blogs: Blog[];
   }
