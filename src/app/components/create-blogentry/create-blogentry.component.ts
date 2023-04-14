@@ -19,7 +19,6 @@ export class CreateBlogentryComponent implements AfterViewInit{
   logContent() {
     const content = tinymce.get('myEditor').getContent();
     console.log(content);
-    
   }
   submit(){
     return 0;
