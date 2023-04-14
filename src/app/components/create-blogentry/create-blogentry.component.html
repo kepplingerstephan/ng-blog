@@ -1,20 +1,30 @@
 <script src="/path/to/tinymce.min.js"></script>
 <app-navbar></app-navbar>
-<div class="container m-3 justify-content-center">
+<div class="container m-3 d-flex justify-content-center align-items-center flex-column">
     <div class="row justify-content-center">
-        <div class="col">
-        <editor style="float:right;" id="myEditor" apiKey="b9wpawtrwwrhejlcbx9j7fx6vfdbohdvin3knzmn3thgaq68" [init]="{ 
-        plugins: 'lists link image table code help wordcount',
-        width: 700, 
-        base_url: '/tinymce', 
-        suffix: '.min'
-    }">
-        </editor>
-    </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col">
-            <button class="btn btn-success float-end mt-3" (click)="submit()">Anlegen</button>
+        <div class="col-8">
+            <editor id="myEditor" apiKey="b9wpawtrwwrhejlcbx9j7fx6vfdbohdvin3knzmn3thgaq68" [init]="{ 
+                plugins: 'lists link image table code help wordcount',
+                width: 700, 
+                base_url: '/tinymce', 
+                suffix: '.min'
+            }">
+            </editor>
         </div>
+    </div>
+</div>
+<div class="container m-3 d-flex align-items-center flex-column justify-content-center">
+    <div class="row">
+        <div class="col">
+            <select class="form-select mx-2" >
+                <option selected>Thema</option>
+                <option value="1">Thema1</option>
+                <option value="2">Thema2</option>
+                <option value="3">Thema3</option>
+            </select>
+        </div>
+<div class="col">
+    <button class="btn btn-success mx-auto" (click)="submit()">Anlegen</button> <!-- Update the class to mx-auto to center the button horizontally within its parent column -->
+</div>
     </div>
 </div>
