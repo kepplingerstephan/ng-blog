@@ -2,19 +2,25 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateBlogentryComponent } from './components/create-blogentry/create-blogentry.component';
 import { HomeComponent } from './components/home/home.component';
+import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   {
-    path:'create',
+    path:
+      'user',
+    component: UserComponent
+  },
+  {
+    path: 'create',
     component: CreateBlogentryComponent
   },
   {
-    path:'**',
-    redirectTo:'/'
+    path: '**',
+    redirectTo: '/'
   },
   {
-    path:'',
-    component:HomeComponent
+    path: '',
+    component: HomeComponent
   }
 ];
 

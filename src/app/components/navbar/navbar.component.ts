@@ -11,7 +11,7 @@ export class NavbarComponent {
     
   }
   hidden() {
-    if(this.router.url.includes("create")) return true;
+    if(this.router.url.includes("create") || this.router.url.includes("user")) return true;
     return false;
   }
 }
