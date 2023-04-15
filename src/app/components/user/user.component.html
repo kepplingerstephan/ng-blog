@@ -1,10 +1,15 @@
 <app-navbar></app-navbar>
-<div class="container m-3 justify-content-center align-items-center">
-    <div class="row">
-        <h1 class="h1">select user</h1>
-    </div>
-    <div class="row">
-        <select class="form-select">
+
+<div class="container-fluid m-2 d-flex flex-column justify-content-center align-items-center">
+
+    <h1 class="h1">select user</h1>
+    <div class="col-lg-2 mt-4">
+
+        <select [(ngModel)]="selectedUser" (change)="selectChanged()" class="form-select form-select-lg me-3">
+            <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
         </select>
+    </div>
+    <div>
+        currently selected: {{this.selectedUserName}}
     </div>
 </div>
