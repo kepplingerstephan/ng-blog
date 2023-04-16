@@ -2,7 +2,6 @@ import { Component, Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from 'src/models/User';
 import { APIResponse } from 'src/models/APIResponse';
-import { FormsModule } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -16,17 +15,18 @@ export class UserComponent implements OnInit {
   constructor(private http: HttpClient, public userService: UserService) { }
 
   public users: User[] = [];
-  public selectedUser : string = "";
+  // public selectedUser : string = "";
 
   async ngOnInit() {
     this.users = (await getUsers()).result;
   }
 
   selectChanged(){
-    var user = this.users.find(u => u.id === parseInt(this.selectedUser))
-    if(user && this.userService.user){
-        this.userService.user = user;
-    }
+    // var user = this.users.find(u => u.id === parseInt(this.selectedUser))
+    // if(user && this.userService.user){
+    //     this.userService.user = user;
+    // }
+    console.log(this.userService.user?.name);
   }
 }
 
