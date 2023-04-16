@@ -5,11 +5,11 @@
     <h1 class="h1">select user</h1>
     <div class="col-lg-2 mt-4">
 
-        <select [(ngModel)]="selectedUser" (change)="selectChanged()" class="form-select form-select-lg me-3">
-            <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+        <select [(ngModel)]="this.userService.user" (change)="selectChanged()" class="form-select form-select-lg me-3">
+            <option *ngFor="let user of users" [value]="user">{{ user.name }}</option>
         </select>
     </div>
     <div>
-        currently selected: {{this.selectedUserName}}
+        currently selected: {{this.userService.user?.name}}
     </div>
 </div>
