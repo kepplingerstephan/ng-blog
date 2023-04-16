@@ -1,1 +1,15 @@
 <app-navbar></app-navbar>
+
+
+<table class="table justify-content-center align-items-center">
+    <thead>
+        <th>Title</th>
+        <th>Created</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let blog of blogs">
+            <td>{{blog.title}}</td>
+            <td>{{blog.created}}</td>
+        </tr>
+    </tbody>
+</table>
