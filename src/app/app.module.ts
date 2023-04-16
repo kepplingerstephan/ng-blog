@@ -22,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     CreateBlogentryComponent,
     HomeComponent,
     NavbarComponent,
-    UserComponent
+    UserComponent,
   ],
   imports: [
     BrowserModule,
