@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateBlogentryComponent } from './components/create-blogentry/create-blogentry.component';
 import { HomeComponent } from './components/home/home.component';
 import { UserComponent } from './components/user/user.component';
+import { DisplayBlogComponent } from './components/display-blog/display-blog.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateBlogentryComponent
+  },
+  {
+    path: 'blog/:id',
+    component: DisplayBlogComponent
   },
   {
     path: '**',

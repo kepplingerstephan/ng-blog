@@ -10,4 +10,5 @@ export interface Blog {
     created: Date;
     updated: Date;
     content: string;
+    title: string;
   }
