@@ -16,7 +16,20 @@ export class DisplayBlogComponent implements OnInit {
     var id = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(id);
     if(id){
-      this.blog = (await getBlog(parseInt(id))).result[0];
+      var result = (await getBlog(parseInt(id))).result;
+      console.log(result)
+      console.log(Array.isArray(result));
+      // if(result){
+      //   this.blog.id = result.id;
+      //   this.blog.userId = result.userId;
+      //   this.blog.user = result.user;
+      //   this.blog.topicId = result.topicId;
+      //   this.blog.topic = result.topic;
+      //   this.blog.title = result.title;
+      //   this.blog.content = result.content;
+      //   this.blog.created = result.created;
+      //   this.blog.updated = result.updated;
+      // }
     }
     console.log(this.blog);
   }

@@ -1,10 +1,9 @@
 <app-navbar></app-navbar>
 
-<div class="container m-5">
-    <div class="card m-2" style="width: 18rem; max-height: 200px;">
-        <div class="card-body">
-            <h1>{{this.blog?.title}}</h1>
-            <section class="content" *ngIf="this.blog?.content" [innerHtml]="this.blog?.content"></section>
-        </div>
+<div class="container-fluid-md m-2 d-flex flex-column justify-content-center align-items-center" style="max-width: 100%;">
+
+    <div class="container m-5 border">
+        <h1>{{this.blog.title}}</h1>
+        <section class="content" *ngIf="this.blog?.content" [innerHtml]="this.blog?.content"></section>
     </div>
 </div>
