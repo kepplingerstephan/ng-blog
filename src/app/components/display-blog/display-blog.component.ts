@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Blog } from 'src/models/Blog';
 import { ActivatedRoute, Router } from '@angular/router';
-import { APIResponse } from 'src/models/APIResponse';
+import { APIResponse, APIResponseById } from 'src/models/APIResponse';
 
 @Component({
   selector: 'app-display-blog',
@@ -19,17 +19,7 @@ export class DisplayBlogComponent implements OnInit {
       var result = (await getBlog(parseInt(id))).result;
       console.log(result)
       console.log(Array.isArray(result));
-      // if(result){
-      //   this.blog.id = result.id;
-      //   this.blog.userId = result.userId;
-      //   this.blog.user = result.user;
-      //   this.blog.topicId = result.topicId;
-      //   this.blog.topic = result.topic;
-      //   this.blog.title = result.title;
-      //   this.blog.content = result.content;
-      //   this.blog.created = result.created;
-      //   this.blog.updated = result.updated;
-      // }
+      this.blog = result;
     }
     console.log(this.blog);
   }
@@ -47,7 +37,7 @@ async function getBlog(id : number) {
     throw new Error(`Error! status: ${response.status}`);
   }
 
-  const result = (await response.json()) as APIResponse<Blog>;
+  const result = (await response.json()) as APIResponseById<Blog>;
   return result;
 } 
 

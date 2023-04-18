@@ -2,8 +2,8 @@
 
 <div class="container-fluid-md m-2 d-flex flex-column justify-content-center align-items-center" style="max-width: 100%;">
 
-    <div class="container m-5 border">
-        <h1>{{this.blog.title}}</h1>
-        <section class="content" *ngIf="this.blog?.content" [innerHtml]="this.blog?.content"></section>
+    <div class="container m-5 border ">
+        <h1 class="mt-2 mb-5">{{this.blog.title}}</h1>
+        <section class="content mb-2" *ngIf="this.blog?.content" [innerHtml]="this.blog.content"></section>
     </div>
 </div>
