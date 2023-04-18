@@ -3948,24 +3948,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Stephan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\steke\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\ng-blog\\api\\ng-BlogAPI\\BlogApi.csproj",
+      "projectUniqueName": "D:\\Git\\ng-Blog\\api\\ng-BlogAPI\\BlogApi.csproj",
       "projectName": "BlogApi",
-      "projectPath": "C:\\Git\\ng-blog\\api\\ng-BlogAPI\\BlogApi.csproj",
-      "packagesPath": "C:\\Users\\Stephan\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\ng-blog\\api\\ng-BlogAPI\\obj\\",
+      "projectPath": "D:\\Git\\ng-Blog\\api\\ng-BlogAPI\\BlogApi.csproj",
+      "packagesPath": "C:\\Users\\steke\\.nuget\\packages\\",
+      "outputPath": "D:\\Git\\ng-Blog\\api\\ng-BlogAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Stephan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\steke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3973,18 +3968,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Git\\ng-blog\\api\\Core\\Core.csproj": {
-              "projectPath": "C:\\Git\\ng-blog\\api\\Core\\Core.csproj"
+            "D:\\Git\\ng-Blog\\api\\Core\\Core.csproj": {
+              "projectPath": "D:\\Git\\ng-Blog\\api\\Core\\Core.csproj"
             },
-            "C:\\Git\\ng-blog\\api\\Data\\Data.csproj": {
-              "projectPath": "C:\\Git\\ng-blog\\api\\Data\\Data.csproj"
+            "D:\\Git\\ng-Blog\\api\\Data\\Data.csproj": {
+              "projectPath": "D:\\Git\\ng-Blog\\api\\Data\\Data.csproj"
             }
           }
         }
@@ -4037,7 +4031,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

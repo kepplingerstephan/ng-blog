@@ -1,4 +1,4 @@
-﻿using Data.Models;
+using Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,5 +20,6 @@ namespace Data.Dtos
 		public DateTime Created { get; set; }
 		public DateTime Updated { get; set; }
 		public string Content { get; set; }
+    public string Title { get; set; }
 	}
 }

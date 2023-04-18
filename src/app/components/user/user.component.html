@@ -2,14 +2,14 @@
 
 <div class="container-fluid m-2 d-flex flex-column justify-content-center align-items-center">
 
-    <h1 class="h1">select user</h1>
+    <h1 class="h1">Select a user:</h1>
     <div class="col-lg-2 mt-4">
 
-        <select [(ngModel)]="this.userService.user" (change)="selectChanged()" class="form-select form-select-lg me-3">
-            <option *ngFor="let user of users" [value]="user">{{ user.name }}</option>
+        <select [(ngModel)]="this.selectedUser" (change)="selectChanged()" class="form-select form-select-lg me-3">
+            <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
         </select>
     </div>
-    <div>
-        currently selected: {{this.userService.user?.name}}
+    <div class="mt-3">
+       <!-- <p class="text">currently selected: <strong>{{this.userService.user?.name}}</strong></p> -->
     </div>
 </div>

@@ -1,30 +1,39 @@
 <script src="/path/to/tinymce.min.js"></script>
 <app-navbar></app-navbar>
-<div class="container m-3 d-flex justify-content-center align-items-center flex-column">
+<div class="container m-3" style="max-width: 100%;">
     <div class="row justify-content-center">
         <div class="col-8">
-            <editor id="myEditor" apiKey="b9wpawtrwwrhejlcbx9j7fx6vfdbohdvin3knzmn3thgaq68" [init]="{ 
-                plugins: 'lists link image table code help wordcount',
-                width: 700, 
-                base_url: '/tinymce', 
-                suffix: '.min'
-            }">
-            </editor>
+            <div class="d-flex justify-content-center mb-3"> <!-- Add the d-flex justify-content-center class to center the editor -->
+                <editor id="myEditor" apiKey="b9wpawtrwwrhejlcbx9j7fx6vfdbohdvin3knzmn3thgaq68" [init]="{ 
+                    plugins: 'lists link image table code help wordcount',
+                    width: 700, 
+                    base_url: '/tinymce', 
+                    suffix: '.min'
+                }">
+                </editor>
+            </div>
         </div>
     </div>
-</div>
-<div class="container m-3 d-flex align-items-center flex-column justify-content-center">
-    <div class="row">
-        <div class="col">
-            <select class="form-select mx-2" >
-                <option selected>Thema</option>
-                <option value="1">Thema1</option>
-                <option value="2">Thema2</option>
-                <option value="3">Thema3</option>
-            </select>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="d-flex justify-content-center"> <!-- Add the d-flex justify-content-center class to center the form controls -->
+                <div class="p-2">
+                    <input id="titleField" type="text" [(ngModel)]="this.title" class="form-control form-control-lg" placeholder="Title">
+                </div>
+                <div class="p-2">
+                    <select id="topicSelect" [(ngModel)]="this.selectedTopicId" (change)="topicSelectChanged()" class="form-select form-select-lg">
+                        <option *ngFor="let topic of topics" [value]="topic.id">{{ topic.name }}</option>
+                    </select>
+                </div>
+                <div class="p-2">
+                    <select id="userSelect" [(ngModel)]="this.selectedUserId" (change)="userSelectChanged()" class="form-select form-select-lg">
+                        <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+                    </select>
+                </div>
+                <div class="p-2">
+                    <button class="btn btn-success btn-lg" (click)="submit()">Anlegen</button>
+                </div>
+            </div>
         </div>
-<div class="col">
-    <button class="btn btn-success mx-auto" (click)="submit()">Anlegen</button> <!-- Update the class to mx-auto to center the button horizontally within its parent column -->
-</div>
     </div>
 </div>

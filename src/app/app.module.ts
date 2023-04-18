@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserComponent } from './components/user/user.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { DisplayBlogComponent } from './components/display-blog/display-blog.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     CreateBlogentryComponent,
     HomeComponent,
     NavbarComponent,
-    UserComponent
+    UserComponent,
+    DisplayBlogComponent,
   ],
   imports: [
     BrowserModule,
